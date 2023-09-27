@@ -12,6 +12,12 @@ public class Main {
          System.out.println("\n" + "Максимальное число = " + maxNumber);
          System.out.println("\n" + "Минимальное число = " + minNumber);
 
+         Basket vasyaBasket  =new Basket();
+         vasyaBasket.add("шоколадка", 120, 2, 2);
+         vasyaBasket.add("Газировка", 220, 2, 0.5);
+         System.out.println(vasyaBasket.getTotalWeight());
+
+
 
 
      }
