@@ -7,8 +7,11 @@ public class Elevator {
         this.minFloor = minFloor;
         this.maxFloor = maxFloor;
     }
+    public void setCurrentFloor(int currentFloor) {
+        this.currentFloor = currentFloor;
+    }
 
-    public int getCurrentFloor(int currentFloor) {
+    public int getCurrentFloor() {
         return currentFloor;
     }
 
@@ -26,11 +29,10 @@ public class Elevator {
                 moveDown(i);
                 if (i == floor) {
                     System.out.println("Этаж: " + floor);
+                    setCurrentFloor(floor);
                     break;
                 }
-                if (i > floor) {
-                    System.out.println(i);
-                }
+
             }
 
         if (currentFloor < floor)
@@ -38,14 +40,12 @@ public class Elevator {
                 moveUp(i);
                 if (i == floor) {
                     System.out.println("Этаж: " + floor);
+                    setCurrentFloor(floor);
                     break;
                 }
-                if (i > floor)
-                    System.out.println(i);
-
-            }
             }
     }
+}
 
 
 
