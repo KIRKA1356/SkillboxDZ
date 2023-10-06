@@ -6,8 +6,9 @@ public class Main {
         while (true) {
             System.out.print("Введите номер этажа: ");
             int floor = new Scanner(System.in).nextInt();
+            if (-3<=floor && floor<=26)
             elevator.movefloor(floor);
-            System.out.println(elevator.getCurrentFloor());
+            else System.out.println("Ошибка, такого этажа нет");
         }
     }
 }
