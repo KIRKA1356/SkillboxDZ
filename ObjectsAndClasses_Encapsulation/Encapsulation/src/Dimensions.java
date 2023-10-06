@@ -1,7 +1,13 @@
 public class Dimensions {
-    private int width; //Ширина
-    private int length; //Длинна
-    private int height; //Высота
+    private final int width; //Ширина
+    private final int length; //Длинна
+    private final int height; //Высота
+
+    public Dimensions() {
+        this.width = 0;
+        this.length = 0;
+        this.height = 0;
+    }
 
     public Dimensions(int width, int length, int height) {
         this.width = width;

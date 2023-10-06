@@ -12,12 +12,17 @@ public class CargoInformation {
     private final boolean fragility;  //хрупкость
 
 
-    public CargoInformation(Dimensions dimensions,
-                            int weight,
-                            String deliveryAddress,
-                            boolean property,
-                            String registrationNumber,
-                            boolean fragility) {
+    public CargoInformation() {
+
+        registrationNumber = "N/A";
+        deliveryAddress = "N/A";
+        property = false;
+        weight = 0;
+        dimensions = null;
+        fragility = false;
+    }
+
+    public CargoInformation(Dimensions dimensions, int weight, String deliveryAddress, boolean property, String registrationNumber, boolean fragility) {
         this.dimensions = dimensions;
         this.weight = weight;
         this.deliveryAddress = deliveryAddress;
@@ -26,23 +31,11 @@ public class CargoInformation {
         this.fragility = fragility;
     }
 
-    public CargoInformation() {
-
-        registrationNumber = null;
-        deliveryAddress = null;
-        property = false;
-        weight = 0;
-        dimensions = null;
-        fragility = false;
-    }
-    
-
-    public CargoInformation setDimension(Dimensions dimensions) {
+    public CargoInformation setDimensions(Dimensions dimensions) {
         return new CargoInformation(dimensions, weight, deliveryAddress, property, registrationNumber, fragility);
     }
 
-
-    public CargoInformation setWidth(int weight) {
+    public CargoInformation setWeight(int weight) {
         return new CargoInformation(dimensions, weight, deliveryAddress, property, registrationNumber, fragility);
     }
 
@@ -50,14 +43,17 @@ public class CargoInformation {
         return new CargoInformation(dimensions, weight, deliveryAddress, property, registrationNumber, fragility);
     }
 
-
-    public String getRegistrationNumber() {
-        return registrationNumber;
+    public CargoInformation setProperty(boolean property) {
+        return new CargoInformation(dimensions, weight, deliveryAddress, property, registrationNumber, fragility);
     }
+
     public CargoInformation setRegistrationNumber(String registrationNumber) {
         return new CargoInformation(dimensions, weight, deliveryAddress, property, registrationNumber, fragility);
     }
 
+    public CargoInformation setFragility(boolean fragility) {
+        return new CargoInformation(dimensions, weight, deliveryAddress, property, registrationNumber, fragility);
+    }
 
     @Override
     public String toString() {
