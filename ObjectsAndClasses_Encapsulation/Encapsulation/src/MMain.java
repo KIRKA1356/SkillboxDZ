@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class Main {
+public class MMain {
     public static void main(String[] args) {
 //        Elevator elevator = new Elevator(-3, 26);
 //        while (true) {
@@ -17,19 +15,17 @@ public class Main {
                                                         false,
                                                         "04B34c3",
                                                         true);
-//        CargoInformation order02 = new CargoInformation();
-//        order02.setDeliveryAddress("ул.Комисаржевской 32");
-//        System.out.println(order02);
-//        order02.setRegistrationNumber("9845f37f");
-//        Dimensions demOrder02 = new Dimensions(4,5,2);
-//        order02.setDimensions(demOrder02);
-//        order02.setWeight(4587);
-//        System.out.println(order02);
+        CargoInformation order02 = new CargoInformation();
+        order02.setDeliveryAddress("ул.Комисаржевской 32");
+        System.out.println(order02);
+        order02.setRegistrationNumber("9845f37f");
+        Dimensions demOrder02 = new Dimensions(4,5,2);
+        order02.setDimensions(demOrder02);
+        order02.setWeight(4587);
+        System.out.println(order02);
 
 
-        System.out.println(order01);
-        demOrder01.setHeight(6);
-        System.out.println(order01);
+        
 
 
     }

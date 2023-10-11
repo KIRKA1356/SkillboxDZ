@@ -1,11 +1,15 @@
 public class Basket {
 
-    private static int count = 0;
+
     private String items = "";
     private int totalPrice = 0;
     private int limit;
-
     private double totalWeigh = 0;
+    private static int allCount = 0;
+    private static int allProduct = 0;
+    public static int allPrice = 0;
+    public static double averagePrice = 0;
+
 
     public Basket() {
         increaseCount(1);
@@ -25,17 +29,28 @@ public class Basket {
         this.totalWeigh = totalWeigh;
     }
 
-    public static int getCount() {
-        return count;
+    public static int getAllCount() {
+        return allCount;
     }
+    public static int getAllPrice() {
+        return allPrice;
+    }
+    public static int getAllProduct(){return allProduct; }
+    public static double getAveragePrice(){ return averagePrice; }
+
 
     public static void increaseCount(int count) {
-        Basket.count = Basket.count + count;
+        Basket.allCount = Basket.allCount + count;
     }
+    public static void increasePrice(int totalPrice){ Basket.allPrice = Basket.allPrice + totalPrice; }
+    public static void increaseProduct(int productCount){ Basket.allProduct = Basket.allProduct + productCount; }
+
+
+
 
     public void add(String name, int price) {
         add(name, price,1,0);
-        add(name, price, count,0);
+        add(name, price, allCount,0);
     }
 
     public void add(String name, int price, int count, double weight) {
@@ -61,7 +76,10 @@ public class Basket {
 
         items = items + "\n" + name + " - " +
             count + " шт. - " + price + "Вес продукта: " + weight;
-        totalPrice = totalPrice + count * price;
+        totalPrice = totalPrice + (count * price);
+        increasePrice(totalPrice);
+        increaseProduct(1);
+        clear();
         totalWeigh = totalWeigh + weight;
     }
 
@@ -88,5 +106,14 @@ public class Basket {
         } else {
             System.out.println(items);
         }
+    }
+    public static double averagePrice(){
+        averagePrice = (double) (allPrice)/(double) (allProduct);
+        return averagePrice;
+    }
+    public static double averagePriceBasket(int allCount, double allPrice){
+        double averagePriceBasket = allPrice/(double) allCount;
+        return averagePriceBasket;
+
     }
 }
