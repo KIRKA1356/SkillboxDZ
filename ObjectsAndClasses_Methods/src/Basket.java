@@ -1,6 +1,4 @@
 public class Basket {
-
-
     private String items = "";
     private int totalPrice = 0;
     private int limit;
