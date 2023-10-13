@@ -13,6 +13,10 @@ public class Keyboard {
         this.weight = weight;
     }
 
+    public double getWeight() {
+        return weight;
+    }
+
     @Override
     public String toString() {
         return  "\n" +

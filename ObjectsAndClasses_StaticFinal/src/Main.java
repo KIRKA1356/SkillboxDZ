@@ -8,9 +8,12 @@ public class Main {
         Keyboard msi33 = new Keyboard("MSI33", KeyboardType.CERAMIC, LcdKeyboard.YES, 2.5);
         Monitor lg34 = new Monitor(MonitorType.IPS, 12.5, 5);
         Computer kagor  = new Computer("Инарос-корп", "Кагор", intel64, ortis34, hddr443, msi33, lg34);
+        kagor.setSumWeight(kagor);
         System.out.println(kagor);
+        System.out.println();
         Keyboard logitech45 = new Keyboard("Logitech 45", KeyboardType.PLASTIC, LcdKeyboard.NO,3);
         kagor.setKeyboard(logitech45);
+        kagor.setSumWeight(kagor);
         System.out.println(kagor);
     }
 }
