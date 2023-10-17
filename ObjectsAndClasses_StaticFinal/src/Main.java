@@ -11,7 +11,7 @@ public class Main {
         kagor.setSumWeight(kagor);
         System.out.println(kagor);
         System.out.println();
-        Keyboard logitech45 = new Keyboard("Logitech 45", KeyboardType.PLASTIC, LcdKeyboard.NO,3);
+        Keyboard logitech45 = new Keyboard("Logitech 450", KeyboardType.PLASTIC, LcdKeyboard.NO,3);
         kagor.setKeyboard(logitech45);
         kagor.setSumWeight(kagor);
         System.out.println(kagor);
